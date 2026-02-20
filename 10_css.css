@@ -1,4 +1,4 @@
-/* 10_css.css */
+
 #showArea
 {
     display: flex;
@@ -22,7 +22,7 @@
     border-radius: 10px;
 }
 
-/* Add New form hidden by default */
+
 form#newContent{
     display: none;
     flex-direction: column;
@@ -31,7 +31,7 @@ form#newContent{
     align-items: center;
 }
 
-/* Filter menu visible by default (matches example screenshot) */
+
 form#filterContent{
     display: block;
     margin: auto;
@@ -166,7 +166,7 @@ nav{
     background-color: black;
 }
 
-/* links, with black separators like the example */
+
 nav a
 {
     color:white;
