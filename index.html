@@ -1,0 +1,168 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Recent Journal Articles</title>
+  <link rel="stylesheet" href="10_css.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+<header>
+  <p>MyBlog.com</p>
+
+  <nav>
+    <a href="index.html">Recent Articles</a>
+    <a href="services.html">Services</a>
+    <a href="mission.html">Mission</a>
+    <a href="about.html">About Us</a>
+  </nav>
+</header>
+
+<main>
+
+  <div id="showArea">
+
+    <div id="toggleButtons">
+      <button onclick="showFilter()" id="filterButton" type="button">Filter Articles</button>
+      <button onclick="showAddNew()" id="addButton" type="button">Add New Article</button>
+    </div>
+
+    <form id="newContent">
+      <h2 class="formRow">Add New Article</h2>
+
+      <div class="formRow">
+        <label for="inputHeader">Title: </label>
+        <input id="inputHeader" name="inputHeader" type="text">
+      </div>
+
+      <div class="formRow">
+        <label>Type:</label>
+
+        <input name="articleType" id="opinionRadio" type="radio" required>
+        <label for="opinionRadio">Opinion</label>
+
+        <input name="articleType" id="recipeRadio" type="radio">
+        <label for="recipeRadio">Recipe</label>
+
+        <input name="articleType" id="lifeRadio" type="radio">
+        <label for="lifeRadio">Life Update</label>
+      </div>
+
+      <div class="formRow">
+        <label for="inputArticle">Text:</label>
+        <textarea id="inputArticle" name="inputArticle"></textarea>
+      </div>
+
+      <div class="formRow">
+        <button onclick="addNewArticle()" type="button">Add New Article</button>
+      </div>
+    </form>
+
+    <form id="filterContent">
+      <h2>Filter by Article Type</h2>
+
+      <label for="opinionCheckbox">Opinion</label>
+      <input onclick="filterArticles()" id="opinionCheckbox" type="checkbox" checked>
+
+      <label for="recipeCheckbox">Recipe</label>
+      <input onclick="filterArticles()" id="recipeCheckbox" type="checkbox" checked>
+
+      <label for="updateCheckbox">Update</label>
+      <input onclick="filterArticles()" id="updateCheckbox" type="checkbox" checked>
+    </form>
+
+  </div>
+
+  <h1>Recent Journal Articles</h1>
+
+  <div id="articleList">
+    <article class="opinion" id="a1">
+      <span class="marker">Opinion</span>
+      <h2>Article 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eros magna, efficitur a facilisis id, venenatis in elit. Nulla dictum vel metus at auctor. Integer venenatis pretium mauris id ultrices. Duis sagittis ligula eget erat hendrerit, ut lobortis libero mollis.</p>
+      <p><a href="moreDetails.html">Read more...</a></p>
+    </article>
+
+    <article class="opinion" id="a2">
+      <span class="marker">Opinion</span>
+      <h2>Article 2</h2>
+      <p>Sed sed neque eget justo venenatis rutrum vitae quis ante. Sed ut iaculis dui, eget commodo nisi. Etiam et arcu ipsum. Praesent porta eu nisi a malesuada. Nunc cursus facilisis ligula, in porttitor nisl pulvinar ultrices.</p>
+      <p><a href="moreDetails.html">Read more...</a></p>
+    </article>
+
+    <article class="recipe" id="a3">
+      <span class="marker">Recipe</span>
+      <h2>Article 3</h2>
+      <p>Vivamus lectus ante, venenatis sed placerat id, pretium a est. Nulla facilisi. Curabitur vestibulum malesuada lectus, nec gravida nibh blandit ultrices. Curabitur euismod neque eget volutpat lacinia.</p>
+      <p><a href="moreDetails.html">Read more...</a></p>
+    </article>
+
+    <article class="update" id="a4">
+      <span class="marker">Update</span>
+      <h2>Article 4</h2>
+      <p>Proin mi ipsum, egestas in diam nec, volutpat scelerisque est. Proin quis ullamcorper lorem. Quisque fringilla non magna ac suscipit. Sed scelerisque, massa ut aliquam faucibus, nisi ante volutpat velit.</p>
+      <p><a href="moreDetails.html">Read more...</a></p>
+    </article>
+
+    <article class="update" id="a5">
+      <span class="marker">Update</span>
+      <h2>Article 5</h2>
+      <p>Sed suscipit vestibulum felis ut aliquam. Pellentesque tincidunt justo non velit consectetur consectetur. Etiam malesuada massa et felis placerat tincidunt. Nam mollis cursus odio, eget interdum neque feugiat eu.</p>
+      <p><a href="moreDetails.html">Read more...</a></p>
+    </article>
+
+    <article class="recipe" id="a6">
+      <span class="marker">Recipe</span>
+      <h2>Article 6</h2>
+      <p>Phasellus nunc sapien, dignissim in magna id, egestas condimentum erat. Fusce ac consectetur velit, ac iaculis nisi. Pellentesque volutpat mi non arcu sodales, id euismod sem pulvinar.</p>
+      <p><a href="moreDetails.html">Read more...</a></p>
+    </article>
+
+    <article class="recipe" id="a7">
+      <span class="marker">Recipe</span>
+      <h2>Article 7</h2>
+      <p>Mauris tempus ligula euismod massa commodo vehicula. Praesent euismod feugiat posuere. Etiam convallis tellus quis eleifend pulvinar. Nullam tempor, turpis tincidunt sagittis suscipit.</p>
+      <p><a href="moreDetails.html">Read more...</a></p>
+    </article>
+
+    <article class="update" id="a8">
+      <span class="marker">Update</span>
+      <h2>Article 8</h2>
+      <p>Integer at ligula semper, viverra enim et, malesuada urna. Praesent porttitor, eros ut pellentesque imperdiet, metus eros eleifend felis, eu tempor felis odio at turpis.</p>
+      <p><a href="moreDetails.html">Read more...</a></p>
+    </article>
+
+    <article class="opinion" id="a9">
+      <span class="marker">Opinion</span>
+      <h2>Article 9</h2>
+      <p>Sed at augue nec turpis condimentum vulputate. Donec tincidunt, turpis dapibus viverra vehicula, dui lectus gravida justo, et rhoncus arcu ante in augue.</p>
+      <p><a href="moreDetails.html">Read more...</a></p>
+    </article>
+
+    <article class="opinion" id="a10">
+      <span class="marker">Opinion</span>
+      <h2>Article 10</h2>
+      <p>Sed erat elit, maximus ut ullamcorper vitae, mattis vel ante. Donec tempus a libero et consectetur. Integer quis erat sit amet sem fringilla bibendum.</p>
+      <p><a href="moreDetails.html">Read more...</a></p>
+    </article>
+  </div>
+
+  <footer>
+    <p>Contact Us!</p>
+    <address>
+      <div>
+        <span>Phone:</span> <span>(555) 123-1234</span>
+        <span>Email:</span> <a href="mailto:contact@myDomain.com">contact@myDomain.com</a>
+        <span>Address:</span> <span>111 Fictional Place</span>
+        <span>Line 2:</span> <span>Orlando, FL, 32825</span>
+      </div>
+    </address>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
