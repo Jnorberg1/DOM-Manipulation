@@ -1,4 +1,4 @@
-// script.js
+
 function $(sel) {
   return document.querySelector(sel);
 }
@@ -10,10 +10,10 @@ function showFilter() {
   const filter = $("#filterContent");
   const form = $("#newContent");
 
-  // hide add form if open
+ 
   if (form) form.style.display = "none";
 
-  // toggle filter menu
+
   if (!filter) return;
   const isOpen = filter.style.display === "block" || filter.style.display === "";
   filter.style.display = isOpen ? "none" : "block";
@@ -23,10 +23,10 @@ function showAddNew() {
   const filter = $("#filterContent");
   const form = $("#newContent");
 
-  // hide filter if open
+
   if (filter) filter.style.display = "none";
 
-  // toggle add form (flex so layout stays consistent)
+
   if (!form) return;
   const isOpen = form.style.display === "flex";
   form.style.display = isOpen ? "none" : "flex";
@@ -121,6 +121,6 @@ function addNewArticle() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // filter is visible by default (matches example), but apply filtering once
+  
   if ($("#articleList")) filterArticles();
 });
